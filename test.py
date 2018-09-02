@@ -6,7 +6,8 @@ circle and rectangle classes.
 '''
 
 import unittest
-from shapetests import *
+from shapetests.rectangle_test import RectangleTest
+from shapetests.circle_test import CircleTest
 
 def main():
     '''
