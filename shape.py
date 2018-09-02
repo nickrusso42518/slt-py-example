@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class shape(ABC):
+class Shape(ABC):
     def __init__(self):
         '''
         Call the constructor from ABC, and do nothing else.

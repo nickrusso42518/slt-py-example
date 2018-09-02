@@ -1,6 +1,6 @@
-from shape import shape
+from shape import Shape
 
-class rectangle(shape):
+class Rectangle(Shape):
     def __init__(self, length, width):
         self.length = length
         self.width = width

@@ -1,7 +1,7 @@
-from shape import shape
+from shape import Shape
 from math import pi
 
-class circle(shape):
+class Circle(Shape):
     decimal_places = 2
 
     def __init__(self, radius):
