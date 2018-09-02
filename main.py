@@ -7,36 +7,32 @@ Purpose: Entrypoint for our simple application.
 import json
 import sys
 import yaml
-from rectangle import Rectangle
-from circle import Circle
+from shapes.rectangle import Rectangle
+from shapes.circle import Circle
 
 def main(argv):
     '''
     Execution starts here.
     '''
-    print("Starting  program")
     # Get the units from the command line arguments or manually
     # from user input
     units = get_units(argv)
 
-    # Read the rectangles from JSON file
+    # Read the rectangles from JSON and circles from YAML
     rectangles = get_rectangles('inputs/rectangle.json')
-
-    # Read the circles from YAML file
     circles = get_circles('inputs/circle.yml')
 
     # Combine both shape types into one list
     general_shapes = rectangles + circles
 
     # Iterate over the shape list using a generator and
-    # print out the math data for each shape using # a different string formatting method each time.
+    # print out the math data for each shape using
+    # a different string formatting method each time.
     for i, general_shape in enumerate(general_shapes):
         print('Shape ' + str(i + 1))
         print(' Type:  %s' % general_shape)
         print(' Area:  {0} {1} sq'.format(general_shape.area(), units))
         print(f' Perim: {general_shape.perimeter()} {units}\n')
-
-    print("Finishing program")
 
 def get_units(argv):
     '''
@@ -53,7 +49,7 @@ def get_units(argv):
     # If the user did specify measurement, copy the first value to 'units'
     else:
         units = argv[1][:2].lower()
-  
+
     # Continue to loop until the user enters 'in' or 'cm'
     # Note that the loop condition is case insensitive
     while units.lower() != 'cm' and units.lower() != 'in':
@@ -77,7 +73,11 @@ def get_circles(filename):
     finally:
         handle.close()
 
+    # Use a list comprehension to create a new Circle
+    # object for each radius integer found in the circle_list.
     circle_objects = [Circle(radius) for radius in data['circle_list']]
+
+    # Return the list of Circle objects
     return circle_objects
 
 def get_rectangles(filename):
@@ -93,6 +93,9 @@ def get_rectangles(filename):
             print(error)
             raise
 
+    # Manually iterate over the JSON dictionaries in the list
+    # of rectangles. Create a new Rectangle object for each one
+    # and add it to the list.
     rectangle_objects = []
     for rect in data['rectangle_list']:
         length = rect['length']
@@ -100,7 +103,10 @@ def get_rectangles(filename):
         new_rectangle = Rectangle(length, width)
         rectangle_objects.append(new_rectangle)
 
+    # Return the list of Rectangle objects
     return rectangle_objects
 
+# If the main.py file was directly run from the shell, invoke
+# the main function.
 if __name__ == "__main__":
     main(sys.argv)

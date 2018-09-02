@@ -1,11 +1,15 @@
+'''
+Author: Nick Russo
+File: shape.py
+Purpose: Definition of the abstract base class Shape
+to demonstrate polymorphism and decorators.
+'''
 from abc import ABC, abstractmethod
 
 class Shape(ABC):
-    def __init__(self):
-        '''
-        Call the constructor from ABC, and do nothing else.
-        '''
-        super().__init__()
+    '''
+    Defines the abstract base class Shape.
+    '''
 
     def __str__(self):
         '''

@@ -5,7 +5,7 @@ Purpose: Unit tests for the Circle class.
 '''
 
 from unittest import TestCase
-from circle import Circle
+from shapes.circle import Circle
 
 class CircleTest(TestCase):
     '''
@@ -34,3 +34,11 @@ class CircleTest(TestCase):
         '''
         self.assertEqual(self.radius5.perimeter(), 31.42)
         self.assertEqual(self.radius8.perimeter(), 50.27)
+
+    def test_diameter(self):
+        '''
+        Since we know the radii, we can compute the diameter
+        and ensure the method returns the proper value.
+        '''
+        self.assertEqual(self.radius5.diameter(), 10)
+        self.assertEqual(self.radius8.diameter(), 16)

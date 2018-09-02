@@ -1,13 +1,13 @@
 '''
 Author: Nick Russo
-File: test.py
+File: shape_unittest.py
 Purpose: Entrypoint for unittest regression testing of the
 circle and rectangle classes.
 '''
 
 import unittest
-from shapetests.rectangle_test import RectangleTest
-from shapetests.circle_test import CircleTest
+from unittests.rectangle_test import RectangleTest
+from unittests.circle_test import CircleTest
 
 def main():
     '''
