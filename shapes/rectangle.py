@@ -31,6 +31,7 @@ class Rectangle(Shape):
     def is_square(self):
         '''
         Determine if the rectangle is a square by comparing the length
-        and width for equality.
+        and width for equality. Note this method is specific to
+        rectangles and is not defined in the Shape class.
         '''
         return self.length == self.width

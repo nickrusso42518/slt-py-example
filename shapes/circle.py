@@ -11,8 +11,7 @@ from shapes.shape import Shape
 class Circle(Shape):
     '''
     Represents a Circle shape, and contains only a radius value
-    and number of decimal places to use when computing various
-    math procedures.
+    and number of decimal places to use when computing values.
     '''
     decimal_places = 2
 

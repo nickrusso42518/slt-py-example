@@ -108,5 +108,5 @@ def get_rectangles(filename):
 
 # If the main.py file was directly run from the shell, invoke
 # the main function.
-if __name__ == "__main__":
+if __name__ == '__main__':
     main(sys.argv)
