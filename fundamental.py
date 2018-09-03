@@ -1,0 +1,83 @@
+'''
+Author: Nick Russo
+File: fundamental.py
+Purpose: Fundamental techniques demonstration.
+'''
+import sys
+from math import pi
+
+def main(argv):
+    '''
+    Execution starts here.
+    '''
+
+    # Get the units from the command line arguments or manually
+    # from user input
+    units = get_units(argv)
+
+    # Create radius list where each element is an integer.
+    radius_list = [5, 8, 11]
+
+    # Iterate over each each radius and compute the circle's area.
+    for radius in radius_list:
+        area = round(pi * (radius ** 2), 2)
+        print('radius {0} -> area {1} {2} sq'.format(radius, area, units))
+
+    # Iterate again, except use a dangerous and error-prone technique.
+    # Notice that the previous loop is simpler and risk-free.
+    for i in range(len(radius_list) + 0):
+        try:
+            radius = radius_list[i]
+        except IndexError as exc:
+            print('Hmm, are we off by 1 somewhere? ' + str(exc))
+            raise
+
+        perim = round(pi * radius * 2, 2)
+        print('radius {0} -> perim {1} {2}'.format(radius, perim, units))
+
+    # Create rectangle dictionary where key is a string and value
+    # is a 2-tuple of length and width integers, respectively.
+    rectangle_dict = {
+        'rectangle1': (8, 2),
+        'rectangle2': (3, 3),
+        'rectangle3': (1, 6)
+    }
+
+    # Iterate over each dictionary item, including the key and the value,
+    # and compute the rectangle's area.
+    for key, val in rectangle_dict.items():
+        area = val[0] * val[1]
+        perim = (val[0] + val[1]) * 2
+        print(f'{key}: {val[0]}x{val[1]} -> area {area} {units} sq', end='')
+        print(f', ({val[0]}+{val[1]})x2 -> perim {perim} {units}')
+
+def get_units(argv):
+    '''
+    Return the unit of measure, either centimeters (cm) or
+    inches (in) based on user input via command line arguments
+    or via interactive input collection.
+    '''
+
+    # If the user did not specify measurement, use a dummy value
+    # to kick off the while loop.
+    if len(argv) < 2:
+        units = 'dummy'
+
+    # If the user did specify measurement, copy the first value to 'units'
+    else:
+        units = argv[1][:2].lower()
+
+    # Continue to loop until the user enters 'in' or 'cm'
+    # Note that the loop condition is case insensitive
+    while units.lower() != 'cm' and units.lower() != 'in':
+        units = input("Choose unit of measure (cm or in): ")
+
+        # Perform slicing if the user enters too much data
+        units = units[:2]
+
+    return units
+
+# If the main.py file was directly run from the shell, invoke
+# the main function.
+if __name__ == '__main__':
+    main(sys.argv)
