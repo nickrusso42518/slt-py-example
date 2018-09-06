@@ -1,8 +1,7 @@
 '''
 Author: Nick Russo
 File: circle.py
-Purpose: Definition of the Circle object, inherited from
-the abstract class Shape.
+Purpose: Defines a Circle object, inherited from the abstract class Shape.
 '''
 
 from math import pi
@@ -36,7 +35,6 @@ class Circle(Shape):
     def diameter(self):
         '''
         Compute the diameter using the formula radius * 2
-        Note that this method is specific to circles and therefore is
-        not defined in the abstract base class Shape.
+        Computing diameter is specific to circles, not all shapes.
         '''
         return self.radius * 2

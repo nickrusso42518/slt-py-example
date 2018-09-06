@@ -1,14 +1,15 @@
 # File:    Makefile
 # Author:  Nicholas Russo
 # Purpose: Phony targets used for Python linting Python and running
-#          the unit tests and samples runs for testing.
+#          the unit tests and samples runs for testing. This file is
+#          NOT part of the Python Fundamentals training course.
 .PHONY: all
 all:	lint unit run
 
 .PHONY: lint
 lint:
 	@echo "Starting  lint"
-	python -m json.tool < inputs/rectangle.json >> /dev/null
+	python3 -m json.tool < inputs/rectangle.json >> /dev/null
 	yamllint -s inputs/circle.yml
 	find . -name "*.py" | xargs pylint
 	@echo "Completed lint"

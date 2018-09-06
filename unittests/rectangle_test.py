@@ -22,8 +22,7 @@ class RectangleTest(TestCase):
 
     def test_area(self):
         '''
-        Since we know the length/width, we can compute the area
-        and ensure the method returns the proper value.
+        Compare the test rectangle area computations to the actual values.
         '''
         self.assertEqual(self.len7wid3.area(), 21)
         self.assertEqual(self.len1wid6.area(), 6)
@@ -31,8 +30,7 @@ class RectangleTest(TestCase):
 
     def test_perimeter(self):
         '''
-        Since we know the length/width, we can compute the perimeter
-        and ensure the method returns the proper value.
+        Compare the test rectangle perimeter computations to the actual values.
         '''
         self.assertEqual(self.len7wid3.perimeter(), 20)
         self.assertEqual(self.len1wid6.perimeter(), 14)
@@ -40,8 +38,7 @@ class RectangleTest(TestCase):
 
     def test_is_square(self):
         '''
-        Since we know the length/width, we can determine if this
-        rectangle is a square or not.
+        Confirm or deny if the rectangle is a square.
         '''
         self.assertFalse(self.len7wid3.is_square())
         self.assertFalse(self.len1wid6.is_square())

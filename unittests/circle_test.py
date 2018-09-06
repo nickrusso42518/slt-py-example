@@ -21,24 +21,21 @@ class CircleTest(TestCase):
 
     def test_area(self):
         '''
-        Since we know the radii, we can compute the area
-        and ensure the method returns the proper value.
+        Compare the test circle area computations to the actual values.
         '''
         self.assertEqual(self.radius5.area(), 78.54)
         self.assertEqual(self.radius8.area(), 201.06)
 
     def test_perimeter(self):
         '''
-        Since we know the radii, we can compute the perimeter
-        and ensure the method returns the proper value.
+        Compare the test circle perimeter computations to the actual values.
         '''
         self.assertEqual(self.radius5.perimeter(), 31.42)
         self.assertEqual(self.radius8.perimeter(), 50.27)
 
     def test_diameter(self):
         '''
-        Since we know the radii, we can compute the diameter
-        and ensure the method returns the proper value.
+        Compare the test circle diameter computations to the actual values.
         '''
         self.assertEqual(self.radius5.diameter(), 10)
         self.assertEqual(self.radius8.diameter(), 16)

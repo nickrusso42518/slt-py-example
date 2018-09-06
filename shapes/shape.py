@@ -2,7 +2,7 @@
 Author: Nick Russo
 File: shape.py
 Purpose: Definition of the abstract base class Shape
-to demonstrate polymorphism and decorators.
+to demonstrate inheritance, polymorphism, and decorators.
 '''
 from abc import ABC, abstractmethod
 
@@ -13,23 +13,30 @@ class Shape(ABC):
 
     def __str__(self):
         '''
-        Whenever a shape is treated like a string, this
-        function returns the name of the class.
+        Allows the shape to be treated like a string, returning the type.
         '''
         return type(self).__name__
+
+    def to_dict(self):
+        '''
+        Convert this shape into a dictionary with name, area, and perimeter.
+        '''
+        return {
+            'type': str(self),
+            'area': self.area(),
+            'perimeter': self.perimeter()
+        }
 
     @abstractmethod
     def area(self):
         '''
-        Children must implement this method based on
-        their type of shape.
+        Children implement this method based on their type of shape.
         '''
         pass
 
     @abstractmethod
     def perimeter(self):
         '''
-        Children must implement this method based on
-        their type of shape.
+        Children implement this method based on their type of shape.
         '''
         pass

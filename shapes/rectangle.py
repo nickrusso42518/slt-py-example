@@ -1,8 +1,7 @@
 '''
 Author: Nick Russo
 File: rectangle.py
-Purpose: Definition of the rectangle object, inherited from
-the abstract class Shape.
+Purpose: Defines a Rectangle object, inherited from the abstract class Shape.
 '''
 
 from shapes.shape import Shape
@@ -31,7 +30,6 @@ class Rectangle(Shape):
     def is_square(self):
         '''
         Determine if the rectangle is a square by comparing the length
-        and width for equality. Note this method is specific to
-        rectangles and is not defined in the Shape class.
+        and width for equality. Only rectangles can be squares.
         '''
         return self.length == self.width

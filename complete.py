@@ -34,6 +34,10 @@ def main(argv):
         print(' Area:  {0} {1} sq'.format(general_shape.area(), units))
         print(f' Perim: {general_shape.perimeter()} {units}\n')
 
+    # Create a list of shapes as dictionaries and write as JSON
+    with open('outputs/computations.json', 'w') as filename:
+        json.dump([gs.to_dict() for gs in general_shapes], filename, indent=4)
+
 def get_units(argv):
     '''
     Return the unit of measure, either centimeters (cm) or
