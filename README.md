@@ -3,7 +3,9 @@ https://travis-ci.org/nickrusso42518/slt-py-example.svg?branch=master)](
 https://travis-ci.org/nickrusso42518/slt-py-example)
 
 # Safari Live Training - Python By Example
-Source code for the training course.
+Source code for the training course. Please contact me with any programs.
+Before beginning, be sure you know how to use `git` at a basic level on
+your computer (Windows, Mac OS, or Linux).
 
 > Contact information:\
 > Email:    njrusmc@gmail.com\
@@ -12,7 +14,6 @@ Source code for the training course.
   * [Download Instructions](#download-instructions)
   * [Usage](#usage)
   * [Testing](#testing)
-  * [FAQ](#faq)
 
 ## Download Instructions
 The easiest way to consume this code is to clone it using SSH or HTTPS.

@@ -10,6 +10,7 @@ install:
 # Execute linting unit tests before running the main programs.
 # If any of these tasks fail, the entire build fails immediately.
 before_script:
+  - "mkdir outputs/"
   - "make lint"
   - "make unit"
 
