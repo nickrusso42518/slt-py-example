@@ -26,6 +26,6 @@ run:
 	@echo "Starting  runs"
 	python3 fundamental.py in
 	python3 fundamental.py cm
-	python3 complete.py in
-	python3 complete.py cm
+	python3 complete.py IN
+	python3 complete.py CM
 	@echo "Completed runs"
