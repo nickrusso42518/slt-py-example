@@ -1,17 +1,17 @@
-'''
+"""
 Author: Nick Russo
 File: shape_pytest.py
 Purpose: Simple pytest demonstration for the defined
 shape classes.
-'''
+"""
 
 from shapes.rectangle import Rectangle
 from shapes.circle import Circle
 
 def test_rectangle():
-    '''
+    """
     Defines tests on some specific rectangle objects.
-    '''
+    """
     len7wid3 = Rectangle(7, 3)
     len1wid6 = Rectangle(1, 6)
     len5wid5 = Rectangle(5, 5)
@@ -28,9 +28,9 @@ def test_rectangle():
     assert len5wid5.is_square()
 
 def test_circle():
-    '''
+    """
     Defines tests on some specific circle objects.
-    '''
+    """
     radius5 = Circle(5)
     radius8 = Circle(8)
 

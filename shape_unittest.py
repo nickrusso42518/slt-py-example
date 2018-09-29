@@ -1,18 +1,18 @@
-'''
+"""
 Author: Nick Russo
 File: shape_unittest.py
 Purpose: Entrypoint for unittest regression testing of the
 circle and rectangle classes.
-'''
+"""
 
 import unittest
 from unittests.rectangle_test import RectangleTest
 from unittests.circle_test import CircleTest
 
 def main():
-    '''
+    """
     Test execution starts here.
-    '''
+    """
 
     # The loader is responsible for loading test cases into test suites
     test_loader = unittest.TestLoader()

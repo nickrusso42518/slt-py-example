@@ -3,9 +3,10 @@ https://travis-ci.org/nickrusso42518/slt-py-example.svg?branch=master)](
 https://travis-ci.org/nickrusso42518/slt-py-example)
 
 # Safari Live Training - Python By Example
-Source code for the training course. Please contact me with any programs.
+Source code for the training course. Please contact me with any questions.
 Before beginning, be sure you know how to use `git` at a basic level on
 your computer (Windows, Mac OS, or Linux).
+
 
 > Contact information:\
 > Email:    njrusmc@gmail.com\
@@ -46,13 +47,17 @@ $ tree
 │   ├── circle.py
 │   ├── rectangle.py
 │   └── shape.py
+├── shapes
+│   ├── (many files ...)
 └── unittests
     ├── __init__.py
     ├── circle_test.py
     └── rectangle_test.py
 ```
 
-Ensure you have Python 3.5 or newer installed along with pip.
+Ensure you have Python 3.6 or newer installed along with pip.
+
+> Visit https://www.python.org/downloads/ to download Python.
 
 `sudo python -m ensurepip`
 

@@ -1,15 +1,15 @@
-'''
+"""
 Author: Nick Russo
 File: fundamental.py
 Purpose: Fundamental techniques demonstration.
-'''
+"""
 import sys
 from math import pi
 
 def main(argv):
-    '''
+    """
     Execution starts here.
-    '''
+    """
 
     # Get the units from the command line arguments or manually
     # from user input
@@ -52,11 +52,11 @@ def main(argv):
         print(f', ({val[0]}+{val[1]})x2 -> perim {perim} {units}')
 
 def get_units(argv):
-    '''
+    """
     Return the unit of measure, either centimeters (cm) or
     inches (in) based on user input via command line arguments
     or via interactive input collection.
-    '''
+    """
 
     # If the user did not specify measurement, use a dummy value
     # to kick off the while loop.

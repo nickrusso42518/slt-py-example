@@ -11,7 +11,7 @@ lint:
 	@echo "Starting  lint"
 	python3 -m json.tool < inputs/rectangle.json >> /dev/null
 	yamllint -s inputs/circle.yml
-	find . -name "*.py" | xargs pylint
+	find . -name "*.py" -not -path "./small/*" | xargs pylint
 	@echo "Completed lint"
 
 .PHONY: unit

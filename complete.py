@@ -1,8 +1,8 @@
-'''
+"""
 Author: Nick Russo
 File: complete.py
 Purpose: Entrypoint for our simple application.
-'''
+"""
 
 import json
 import sys
@@ -11,9 +11,9 @@ from shapes.rectangle import Rectangle
 from shapes.circle import Circle
 
 def main(argv):
-    '''
+    """
     Execution starts here.
-    '''
+    """
     # Get the units from the command line arguments or manually
     # from user input
     units = get_units(argv)
@@ -39,11 +39,11 @@ def main(argv):
         json.dump([gs.to_dict() for gs in general_shapes], filename, indent=4)
 
 def get_units(argv):
-    '''
+    """
     Return the unit of measure, either centimeters (cm) or
     inches (in) based on user input via command line arguments
     or via interactive input collection.
-    '''
+    """
 
     # If the user did not specify measurement, use a dummy value
     # to kick off the while loop.
@@ -65,10 +65,10 @@ def get_units(argv):
     return units
 
 def get_circles(filename):
-    '''
+    """
     Read in from the YAML file supplied and create
     a list of circles based on the input data.
-    '''
+    """
     try:
         handle = open(filename, 'r')
         data = yaml.load(handle)
@@ -85,11 +85,11 @@ def get_circles(filename):
     return circle_objects
 
 def get_rectangles(filename):
-    '''
+    """
     Read in from the JSON file supplied and create
     a list of rectangles based on the input data.
     This function is a generator.
-    '''
+    """
     with open(filename, 'r') as handle:
         try:
             data = json.load(handle)
