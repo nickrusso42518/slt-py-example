@@ -81,7 +81,7 @@ is interactive and asks the user whether the units are inches (in) or
 centimeters (cm).
 
 ```
-Nicholass-MBP:shapes nicholasrusso$ python3 fundamental.py
+$ python3 fundamental.py
 Choose unit of measure (cm or in): in
 radius 5 -> area 78.54 in sq
 radius 8 -> area 201.06 in sq
@@ -98,7 +98,7 @@ When one argument is supplied, the script is non-interactive, as `in` or `cm`
 has been specified.
 
 ```
-Nicholass-MBP:shapes nicholasrusso$ python3 fundamental.py cm
+$ python3 fundamental.py cm
 radius 5 -> area 78.54 cm sq
 radius 8 -> area 201.06 cm sq
 radius 11 -> area 380.13 cm sq
@@ -114,7 +114,7 @@ If the interactive or command line argument is bogus, the program keeps
 asking for the current input (case insensitive):
 
 ```
-Nicholass-MBP:shapes nicholasrusso$ python3 fundamental.py dog
+$ python3 fundamental.py dog
 Choose unit of measure (cm or in): cat
 Choose unit of measure (cm or in): monkey
 Choose unit of measure (cm or in): CM
@@ -127,6 +127,37 @@ radius 11 -> perim 69.12 CM
 rectangle1: 8x2 -> area 16 CM sq, (8+2)x2 -> perim 20 CM
 rectangle2: 3x3 -> area 9 CM sq, (3+3)x2 -> perim 12 CM
 rectangle3: 1x6 -> area 6 CM sq, (1+6)x2 -> perim 14 CM
+```
+
+The `complete.py` code wraps up almost everything in this class within
+a simple small program. It relies on the `shapes` package and its
+component modules. The user input is similar to `fundamental.py` in
+that either `in` or `cm` must be specified with some formatting
+exceptions described previously. The code uses object-oriented
+programming, abstract classes, polymorphism, and YAML/JSON interaction
+for execution.
+
+```
+$ python3 complete.py cm
+Type:  Rectangle
+ Area:  21 cm sq
+ Perim: 20 cm
+
+Type:  Rectangle
+ Area:  25 cm sq
+ Perim: 20 cm
+
+Type:  Rectangle
+ Area:  6 cm sq
+ Perim: 14 cm
+
+Type:  Circle
+ Area:  201.06 cm sq
+ Perim: 50.27 cm
+
+Type:  Circle
+ Area:  78.54 cm sq
+ Perim: 31.42 cm
 ```
 
 ## Testing

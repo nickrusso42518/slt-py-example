@@ -25,12 +25,11 @@ def main(argv):
     # Combine both shape types into one list
     general_shapes = rectangles + circles
 
-    # Iterate over the shape list using a generator and
-    # print out the math data for each shape using
+    # Iterate over the shape list using a 'for' loop.
+    # Print out the math data for each shape using
     # a different string formatting method each time.
-    for i, general_shape in enumerate(general_shapes):
-        print('Shape ' + str(i + 1))
-        print(' Type:  %s' % general_shape)
+    for general_shape in general_shapes:
+        print('Type:  ' + str(general_shape))
         print(' Area:  {0} {1} sq'.format(general_shape.area(), units))
         print(f' Perim: {general_shape.perimeter()} {units}\n')
 
@@ -88,7 +87,6 @@ def get_rectangles(filename):
     """
     Read in from the JSON file supplied and create
     a list of rectangles based on the input data.
-    This function is a generator.
     """
     with open(filename, 'r') as handle:
         try:
