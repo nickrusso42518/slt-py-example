@@ -55,11 +55,11 @@ def get_units(argv):
 
     # Continue to loop until the user enters 'in' or 'cm'
     # Note that the loop condition is case insensitive
-    while units.lower() != 'cm' and units.lower() != 'in':
+    while units != 'cm' and units != 'in':
         units = input("Choose unit of measure (cm or in): ")
 
         # Perform slicing if the user enters too much data
-        units = units[:2]
+        units = units[:2].lower()
 
     return units
 

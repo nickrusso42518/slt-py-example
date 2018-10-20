@@ -89,9 +89,15 @@ radius 11 -> area 380.13 in sq
 radius 5 -> perim 31.42 in
 radius 8 -> perim 50.27 in
 radius 11 -> perim 69.12 in
-rectangle1: 8x2 -> area 16 in sq, (8+2)x2 -> perim 20 in
-rectangle2: 3x3 -> area 9 in sq, (3+3)x2 -> perim 12 in
-rectangle3: 1x6 -> area 6 in sq, (1+6)x2 -> perim 14 in
+rectangle1
+ 8x2 -> area 16 in sq
+ (8+2)x2 -> perim 20 in
+rectangle2
+ 3x3 -> area 9 in sq
+ (3+3)x2 -> perim 12 in
+rectangle3
+ 1x6 -> area 6 in sq
+ (1+6)x2 -> perim 14 in
 ```
 
 When one argument is supplied, the script is non-interactive, as `in` or `cm`
@@ -105,9 +111,15 @@ radius 11 -> area 380.13 cm sq
 radius 5 -> perim 31.42 cm
 radius 8 -> perim 50.27 cm
 radius 11 -> perim 69.12 cm
-rectangle1: 8x2 -> area 16 cm sq, (8+2)x2 -> perim 20 cm
-rectangle2: 3x3 -> area 9 cm sq, (3+3)x2 -> perim 12 cm
-rectangle3: 1x6 -> area 6 cm sq, (1+6)x2 -> perim 14 cm
+rectangle1
+ 8x2 -> area 16 cm sq
+ (8+2)x2 -> perim 20 cm
+rectangle2
+ 3x3 -> area 9 cm sq
+ (3+3)x2 -> perim 12 cm
+rectangle3
+ 1x6 -> area 6 cm sq
+ (1+6)x2 -> perim 14 cm
 ```
 
 If the interactive or command line argument is bogus, the program keeps
@@ -118,15 +130,21 @@ $ python3 fundamental.py dog
 Choose unit of measure (cm or in): cat
 Choose unit of measure (cm or in): monkey
 Choose unit of measure (cm or in): CM
-radius 5 -> area 78.54 CM sq
-radius 8 -> area 201.06 CM sq
-radius 11 -> area 380.13 CM sq
-radius 5 -> perim 31.42 CM
-radius 8 -> perim 50.27 CM
-radius 11 -> perim 69.12 CM
-rectangle1: 8x2 -> area 16 CM sq, (8+2)x2 -> perim 20 CM
-rectangle2: 3x3 -> area 9 CM sq, (3+3)x2 -> perim 12 CM
-rectangle3: 1x6 -> area 6 CM sq, (1+6)x2 -> perim 14 CM
+radius 5 -> area 78.54 cm sq
+radius 8 -> area 201.06 cm sq
+radius 11 -> area 380.13 cm sq
+radius 5 -> perim 31.42 cm
+radius 8 -> perim 50.27 cm
+radius 11 -> perim 69.12 cm
+rectangle1
+ 8x2 -> area 16 cm sq
+ (8+2)x2 -> perim 20 cm
+rectangle2
+ 3x3 -> area 9 cm sq
+ (3+3)x2 -> perim 12 cm
+rectangle3
+ 1x6 -> area 6 cm sq
+ (1+6)x2 -> perim 14 cm
 ```
 
 The `complete.py` code wraps up almost everything in this class within

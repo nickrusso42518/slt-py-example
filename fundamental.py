@@ -46,10 +46,13 @@ def main(argv):
     # Iterate over each dictionary item, including the key and the value,
     # and compute the rectangle's area.
     for key, val in rectangle_dict.items():
-        area = val[0] * val[1]
-        perim = (val[0] + val[1]) * 2
-        print(f'{key}: {val[0]}x{val[1]} -> area {area} {units} sq', end='')
-        print(f', ({val[0]}+{val[1]})x2 -> perim {perim} {units}')
+        length = val[0]
+        width = val[1]
+        area = length * width
+        perim = (length + width) * 2
+        print(key)
+        print(f' {length}x{width} -> area {area} {units} sq')
+        print(f' ({length}+{width})x2 -> perim {perim} {units}')
 
 def get_units(argv):
     """
