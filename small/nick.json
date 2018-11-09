@@ -4,8 +4,8 @@
         "chair",
         "table",
         {
-            "daughter": {
-                "name": "olivia",
+            "sofa": {
+                "color": "gray",
                 "age": 2
             }
         }

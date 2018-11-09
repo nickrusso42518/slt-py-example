@@ -8,7 +8,7 @@ from shapes.shape import Shape
 
 class Rectangle(Shape):
     """
-    Represents a Rectangbel shape, and contains a length value
+    Represents a Rectangle shape, and contains a length value
     and width value.
     """
     def __init__(self, length, width):
