@@ -1,16 +1,15 @@
 ---
-language: python
+language: "python"
 python:
   - "3.6"
 
-# Install python packages for ansible and linters.
+# Install python packages and other necessary setup tasks.
 install:
-  - "pip install -r requirements.txt"
+  - "make setup"
 
 # Execute linting unit tests before running the main programs.
 # If any of these tasks fail, the entire build fails immediately.
 before_script:
-  - "mkdir outputs/"
   - "make lint"
   - "make unit"
 

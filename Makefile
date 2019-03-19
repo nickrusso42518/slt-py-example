@@ -6,6 +6,14 @@
 .PHONY: all
 all:	lint unit run
 
+.PHONY: setup
+setup:
+	@echo "Starting  setup"
+	python3 -m pip install -r requirements.txt
+	rm -rf outputs
+	mkdir outputs
+	@echo "Completed setup"
+
 .PHONY: lint
 lint:
 	@echo "Starting  lint"

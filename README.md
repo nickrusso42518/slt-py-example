@@ -37,8 +37,6 @@ $ tree
 ├── inputs
 │   ├── circle.yml
 │   └── rectangle.json
-├── outputs
-│   └── computations.json
 ├── requirements.txt
 ├── shape_pytest.py
 ├── shape_unittest.py
@@ -47,7 +45,7 @@ $ tree
 │   ├── circle.py
 │   ├── rectangle.py
 │   └── shape.py
-├── shapes
+├── small
 │   ├── (many files ...)
 └── unittests
     ├── __init__.py
@@ -66,6 +64,14 @@ or
 `sudo easy_install pip`
 
 No need to install any packages via pip; this is done during the course.
+
+To get setup, first run `make setup` which will install the required
+Python packages and create the `outputs/` directory. Failing to take
+this step could result in errors later in the course.
+
+Optionally, run `make` to run a full suite of testing on the code
+to ensure everything works. After a fresh `git clone` there should
+be no errors.
 
 ## Usage
 There are two main programs to run, `fundamentals.py` and `complete.py`.
@@ -189,5 +195,6 @@ There are currently three steps:
   * `run`: Runs the two programs with both `in` and `cm` as inputs.
     The default input files should have no failures.
 
-You can run `make all` to run all the testing in series when doing manual
-regression testing from the shell.
+You can run `make` or `make all` to run all the testing in series when doing
+manual regression testing from the shell. As mentioned earlier in the README,
+this is a good idea after first cloning the repository.
