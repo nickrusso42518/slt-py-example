@@ -81,6 +81,8 @@ def get_units(argv):
     return units
 
 # If the main.py file was directly run from the shell, invoke
-# the main function.
+# the main function. See the following files for more info:
+#   - small/testmod.py
+#   - small/namemain.py
 if __name__ == '__main__':
     main(sys.argv)
