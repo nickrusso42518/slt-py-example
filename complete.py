@@ -70,7 +70,7 @@ def get_circles(filename):
     """
     try:
         handle = open(filename, 'r')
-        data = yaml.load(handle)
+        data = yaml.safe_load(handle)
     except yaml.YAMLError as error:
         print(error)
     finally:
