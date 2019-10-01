@@ -34,8 +34,8 @@ def main(argv):
         print(f' Perim: {general_shape.perimeter()} {units}\n')
 
     # Create a list of shapes as dictionaries and write as JSON
-    with open('outputs/computations.json', 'w') as filename:
-        json.dump([gs.to_dict() for gs in general_shapes], filename, indent=4)
+    with open('outputs/computations.json', 'w') as handle:
+        json.dump([gs.to_dict() for gs in general_shapes], handle, indent=4)
 
 def get_units(argv):
     """
