@@ -1,5 +1,5 @@
 def print_name():
-    raise NotImplementedError('ran out of time')
+    raise NotImplementedError("ran out of time")
 
 def run_loop(repeat):
     for i in range(repeat):

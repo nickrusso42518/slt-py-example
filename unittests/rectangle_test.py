@@ -7,6 +7,7 @@ Purpose: Unit tests for the Rectangle class.
 from unittest import TestCase
 from shapes.rectangle import Rectangle
 
+
 class RectangleTest(TestCase):
     """
     Defines a test case for the Rectangle class.

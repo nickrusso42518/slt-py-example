@@ -6,4 +6,4 @@ class Dog(Animal):
         super().__init__(size)
 
     def get_info(self):
-        return f'dog is {self.size} with a {self.bark_type} bark'
+        return f"dog is {self.size} with a {self.bark_type} bark"

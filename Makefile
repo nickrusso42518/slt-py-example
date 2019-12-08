@@ -20,6 +20,7 @@ lint:
 	python3 -m json.tool < inputs/rectangle.json >> /dev/null
 	yamllint -s inputs/circle.yml
 	find . -name "*.py" -not -path "./small/*" | xargs pylint
+	find . -name "*.py" -not -path "./small/*" | xargs black -l 80 --check
 	@echo "Completed lint"
 
 .PHONY: unit

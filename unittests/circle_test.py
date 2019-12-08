@@ -7,6 +7,7 @@ Purpose: Unit tests for the Circle class.
 from unittest import TestCase
 from shapes.circle import Circle
 
+
 class CircleTest(TestCase):
     """
     Defines a test case for the Circle class.

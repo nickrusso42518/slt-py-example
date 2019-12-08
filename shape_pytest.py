@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 Author: Nick Russo
 File: shape_pytest.py
@@ -7,6 +9,7 @@ shape classes.
 
 from shapes.rectangle import Rectangle
 from shapes.circle import Circle
+
 
 def test_rectangle():
     """
@@ -26,6 +29,7 @@ def test_rectangle():
     assert not len7wid3.is_square()
     assert not len1wid6.is_square()
     assert len5wid5.is_square()
+
 
 def test_circle():
     """

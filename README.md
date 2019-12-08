@@ -187,6 +187,8 @@ Type:  Circle
 ## Testing
 A GNU Makefile with phony targets is used for testing this codebase.
 There are currently three steps:
+  * `setup`: Installs required Python packages in the `requirements.txt`
+    file using `pip`. Creates `outputs/` directory.
   * `lint`: Runs YAML and Python linters. This captures any syntax or
     styling errors with the code.
   * `unit`: Runs `unittest` and `pytest` unit tests for the rectangle and

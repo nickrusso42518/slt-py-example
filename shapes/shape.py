@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 Author: Nick Russo
 File: shape.py
@@ -5,6 +7,7 @@ Purpose: Definition of the abstract base class Shape
 to demonstrate inheritance, polymorphism, and decorators.
 """
 from abc import ABC, abstractmethod
+
 
 class Shape(ABC):
     """
@@ -22,9 +25,9 @@ class Shape(ABC):
         Convert this shape into a dictionary with name, area, and perimeter.
         """
         return {
-            'type': str(self),
-            'area': self.area(),
-            'perimeter': self.perimeter()
+            "type": str(self),
+            "area": self.area(),
+            "perimeter": self.perimeter(),
         }
 
     @abstractmethod

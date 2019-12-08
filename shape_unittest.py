@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 Author: Nick Russo
 File: shape_unittest.py
@@ -8,6 +10,7 @@ circle and rectangle classes.
 import unittest
 from unittests.rectangle_test import RectangleTest
 from unittests.circle_test import CircleTest
+
 
 def main():
     """
@@ -20,7 +23,7 @@ def main():
     # Build a list of test suites to run
     test_suites = [
         test_loader.loadTestsFromTestCase(CircleTest),
-        test_loader.loadTestsFromTestCase(RectangleTest)
+        test_loader.loadTestsFromTestCase(RectangleTest),
     ]
 
     # The runner is responsible for executing tests and printing output
@@ -30,5 +33,6 @@ def main():
     for test_suite in test_suites:
         test_runner.run(test_suite)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

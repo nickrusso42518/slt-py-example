@@ -1,5 +1,5 @@
 def print_name():
-    print('nick russo'[99])
+    print("nick russo"[99])
 
 def run_loop(repeat):
     for i in range(repeat):

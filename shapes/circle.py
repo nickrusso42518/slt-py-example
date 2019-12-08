@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 Author: Nick Russo
 File: circle.py
@@ -7,11 +9,13 @@ Purpose: Defines a Circle object, inherited from the abstract class Shape.
 from math import pi
 from shapes.shape import Shape
 
+
 class Circle(Shape):
     """
     Represents a Circle shape, and contains only a radius value
     and number of decimal places to use when computing values.
     """
+
     decimal_places = 2
 
     def __init__(self, radius):

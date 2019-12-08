@@ -1,3 +1,3 @@
-cars = ['bmw', 'ford', 'gmc']
+cars = ["bmw", "ford", "gmc"]
 for car in cars:
-    print(f'I have a {car}')
+    print(f"I have a {car}")

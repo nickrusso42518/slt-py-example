@@ -6,4 +6,4 @@ class Cat(Animal):
         super().__init__(size)
 
     def get_info(self):
-        return f'cat is {self.size} with a {self.purr_type} purr'
+        return f"cat is {self.size} with a {self.purr_type} purr"

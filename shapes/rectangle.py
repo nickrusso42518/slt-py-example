@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 """
 Author: Nick Russo
 File: rectangle.py
@@ -6,11 +8,13 @@ Purpose: Defines a Rectangle object, inherited from the abstract class Shape.
 
 from shapes.shape import Shape
 
+
 class Rectangle(Shape):
     """
     Represents a Rectangle shape, and contains a length value
     and width value.
     """
+
     def __init__(self, length, width):
         self.length = length
         self.width = width
