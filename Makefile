@@ -9,7 +9,7 @@ all:	lint unit run
 .PHONY: setup
 setup:
 	@echo "Starting  setup"
-	python3 -m pip install -r requirements.txt
+	python -m pip install -r requirements.txt
 	rm -rf outputs
 	mkdir outputs
 	@echo "Completed setup"
@@ -17,7 +17,7 @@ setup:
 .PHONY: lint
 lint:
 	@echo "Starting  lint"
-	python3 -m json.tool < inputs/rectangle.json >> /dev/null
+	python -m json.tool < inputs/rectangle.json >> /dev/null
 	yamllint -s inputs/circle.yml
 	find . -name "*.py" -not -path "./small/*" | xargs pylint
 	find . -name "*.py" -not -path "./small/*" | xargs black -l 80 --check
@@ -26,15 +26,21 @@ lint:
 .PHONY: unit
 unit:
 	@echo "Starting  unit tests"
-	python3 shape_unittest.py
+	python shape_unittest.py
 	pytest shape_pytest.py
 	@echo "Completed unit tests"
 
 .PHONY: run
 run:
 	@echo "Starting  runs"
-	python3 fundamental.py in
-	python3 fundamental.py cm
-	python3 complete.py IN
-	python3 complete.py CM
+	python fundamental.py in
+	python fundamental.py cm
+	python complete.py IN
+	python complete.py CM
 	@echo "Completed runs"
+
+.PHONY: clean
+clean:
+	@echo "Starting  clean"
+	find . -name "*.pyc" | xargs rm
+	@echo "Starting  clean"
