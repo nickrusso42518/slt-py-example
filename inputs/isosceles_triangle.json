@@ -1,0 +1,17 @@
+{
+    "isosceles_triangle_list": [
+      {
+        "base": 4,
+        "height": 5
+      },
+      {
+        "base": 5,
+        "height": 5
+      },
+      {
+        "base": 9,
+        "height": 12
+      }
+    ]
+  }
+  

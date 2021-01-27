@@ -11,6 +11,8 @@ import sys
 import yaml
 from shapes.rectangle import Rectangle
 from shapes.circle import Circle
+from shapes.equilateral_triangle import EquilateralTriangle
+from shapes.isosceles_triangle import IsoscelesTriangle
 
 
 def main(argv):
@@ -24,9 +26,11 @@ def main(argv):
     # Read the rectangles from JSON and circles from YAML
     rectangles = get_rectangles("inputs/rectangle.json")
     circles = get_circles("inputs/circle.yml")
+    isosceles_triangles = get_isosceles_triangles("inputs/isosceles_triangle.json")
+    equilateral_triangles = get_equilateral_triangles("inputs/equilateral_triangle.yml")
 
     # Combine both shape types into one list
-    general_shapes = rectangles + circles
+    general_shapes = rectangles + circles + isosceles_triangles + equilateral_triangles
 
     # Iterate over the shape list using a 'for' loop.
     # Print out the math data for each shape using
@@ -114,6 +118,42 @@ def get_rectangles(filename):
     # Return the list of Rectangle objects
     return rectangle_objects
 
+def get_equilateral_triangles(filename):
+    """
+    Read in from the YAML file supplied and create
+    a list of equilateral triangles based on the input data.
+    """
+    with open(filename, "r") as handle:
+        try:
+            data = yaml.safe_load(handle)
+        except yaml.YAMLError as error:
+            print(error)
+            raise
+
+    equilateral_triangle_objects = [EquilateralTriangle(side) for side in data["equilateral_triangle_list"]]
+
+    return equilateral_triangle_objects
+
+def get_isosceles_triangles(filename):
+    """
+    Read in from the JSON file supplied and create
+    a list of isosceles triangles based on the input data.
+    """
+    with open(filename, "r") as handle:
+        try:
+            data = json.load(handle)
+        except json.decoder.JSONDecodeError as error:
+            print(error)
+            raise
+
+    isosceles_triangle_objects = []
+    for triangle in data["isosceles_triangle_list"]:
+        base = triangle["base"]
+        height = triangle["height"]
+        new_triangle = IsoscelesTriangle(base, height)
+        isosceles_triangle_objects.append(new_triangle)
+
+    return isosceles_triangle_objects
 
 # If the main.py file was directly run from the shell, invoke
 # the main function.
