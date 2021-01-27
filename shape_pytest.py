@@ -9,7 +9,10 @@ shape classes.
 
 from shapes.rectangle import Rectangle
 from shapes.circle import Circle
+from shapes.equilateral_triangle import EquilateralTriangle
+from shapes.isosceles_triangle import IsoscelesTriangle
 
+from math import sqrt
 
 def test_rectangle():
     """
@@ -45,3 +48,42 @@ def test_circle():
     assert radius8.perimeter() == 50.27
     assert radius5.diameter() == 10
     assert radius8.diameter() == 16
+
+def test_equilateral_triangle():
+    """
+    Defines tests on some specific EquilateralTriangle objects.
+    """
+    sideLength1 = 1
+    sideLength6 = 1
+    triangle1 = EquilateralTriangle(sideLength1)
+    triangle6 = EquilateralTriangle(sideLength6)
+
+    assert triangle1.area() == sqrt(4)/2 * (sideLength1**2)
+    assert triangle1.perimeter() == 3*sideLength1
+    assert triangle1.get_height() == (sqrt(3)/2 )*sideLength1
+
+    assert triangle6.area() == sqrt(4)/2 * (sideLength6**2)
+    assert triangle6.perimeter() == 3*sideLength6
+    assert triangle6.get_height() == (sqrt(3)/2 )* sideLength6
+
+def test_isosceles_triangle():
+    """
+    Defines tests on some specific IsoscelesTriangle objects.
+    """
+    base6height4 = IsoscelesTriangle(6,4)
+    right_isosceles_triangle = IsoscelesTriangle(sqrt(2), sqrt(2)/2)
+
+    assert base6height4.area() == 12
+    assert base6height4.perimeter() == 16
+    assert base6height4.get_frame_length() == 5
+    assert base6height4.is_isosceles_right_triangle() == False
+
+    expected_area_for_right_triangle = 0.5
+    expected_perimeter_for_right_triangle = 3.41
+    assert right_isosceles_triangle.area()- expected_area_for_right_triangle < 0.00000000001
+    assert right_isosceles_triangle.perimeter() - expected_perimeter_for_right_triangle < 0.01
+    assert right_isosceles_triangle.get_frame_length() == 1
+    assert right_isosceles_triangle.is_isosceles_right_triangle() == True
+
+
+

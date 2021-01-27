@@ -34,12 +34,12 @@ class IsoscelesTriangle(Shape):
         """
         Calculate a frame length of Isosceles triangle based on Pythagoras's theorem
         """
-        return sqrt((self.base / 2)**2 + h**2)
+        return sqrt((self.base / 2)**2 + self.height**2)
 
     def is_isosceles_right_triangle(self):
         """
         Determine if a isosceles triangle is right by comparing 
         base length to formula a*sqrt(2)
         """
-        return sqrt(self.base) == self.get_frame_length() * sqrt(2)
+        return self.base == self.get_frame_length() * sqrt(2)
 
