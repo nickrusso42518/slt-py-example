@@ -8,9 +8,12 @@ Purpose: Entrypoint for our simple application.
 
 import json
 import sys
+
 import yaml
-from shapes.rectangle import Rectangle
+
 from shapes.circle import Circle
+from shapes.rectangle import Rectangle
+from shapes.triangle import Triangle
 
 
 def main(argv):
@@ -21,12 +24,13 @@ def main(argv):
     # from user input
     units = get_units(argv)
 
-    # Read the rectangles from JSON and circles from YAML
+    # Read the rectangles , triangles from JSON and circles from YAML
     rectangles = get_rectangles("inputs/rectangle.json")
     circles = get_circles("inputs/circle.yml")
+    triangles = get_triangles("inputs/triangle.json")
 
     # Combine both shape types into one list
-    general_shapes = rectangles + circles
+    general_shapes = rectangles + circles + triangles
 
     # Iterate over the shape list using a 'for' loop.
     # Print out the math data for each shape using
@@ -113,6 +117,29 @@ def get_rectangles(filename):
 
     # Return the list of Rectangle objects
     return rectangle_objects
+
+
+def get_triangles(filename):
+    """
+        Read in from the JSON file supplied and create
+        a list of triangles based on the input data.
+        """
+    with open(filename, "r") as handle:
+        try:
+            data = json.load(handle)
+        except json.decoder.JSONDecodeError as error:
+            print(error)
+            raise
+
+    # Manually iterate over the JSON dictionaries in the list
+    # of triangles. Create a new Triangle object for each one
+    # and add it to the list.
+    triangle_objects = [
+        Triangle(tr["side_a"], tr["side_b"], tr["side_c"]) for
+        tr in data["triangle_list"]]
+
+    # Return the list of Triangle objects
+    return triangle_objects
 
 
 # If the main.py file was directly run from the shell, invoke
