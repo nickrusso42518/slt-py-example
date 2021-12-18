@@ -24,7 +24,7 @@ def main(argv):
     # Iterate over each each radius and compute the circle's area.
     for radius in radius_list:
         area = round(pi * (radius ** 2), 2)
-        print("radius {0} -> area {1} {2} sq".format(radius, area, units))
+        print(f"radius {radius} -> area {area} {units} sq")
 
     # Iterate again, except use a dangerous and error-prone technique.
     # Notice that the previous loop is simpler and risk-free.
@@ -36,7 +36,7 @@ def main(argv):
             raise
 
         perim = round(pi * radius * 2, 2)
-        print("radius {0} -> perim {1} {2}".format(radius, perim, units))
+        print(f"radius {radius} -> perim {perim} {units}")
 
     # Create rectangle dictionary where key is a string and value
     # is a 2-tuple of length and width integers, respectively.

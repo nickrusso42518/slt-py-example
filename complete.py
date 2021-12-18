@@ -33,11 +33,11 @@ def main(argv):
     # a different string formatting method each time.
     for general_shape in general_shapes:
         print("Type:  " + str(general_shape))
-        print(" Area:  {0} {1} sq".format(general_shape.area(), units))
+        print(f" Area:  {general_shape.area()} {units} sq")
         print(f" Perim: {general_shape.perimeter()} {units}\n")
 
     # Create a list of shapes as dictionaries and write as JSON
-    with open("outputs/computations.json", "w") as handle:
+    with open("outputs/computations.json", "w", encoding="utf-8") as handle:
         json.dump([gs.to_dict() for gs in general_shapes], handle, indent=4)
 
 
@@ -74,12 +74,10 @@ def get_circles(filename):
     a list of circles based on the input data.
     """
     try:
-        handle = open(filename, "r")
-        data = yaml.safe_load(handle)
+        with open(filename, "r", encoding="utf-8") as handle:
+            data = yaml.safe_load(handle)
     except yaml.YAMLError as error:
         print(error)
-    finally:
-        handle.close()
 
     # Use a list comprehension to create a new Circle
     # object for each radius integer found in the circle_list.
@@ -94,7 +92,7 @@ def get_rectangles(filename):
     Read in from the JSON file supplied and create
     a list of rectangles based on the input data.
     """
-    with open(filename, "r") as handle:
+    with open(filename, "r", encoding="utf-8") as handle:
         try:
             data = json.load(handle)
         except json.decoder.JSONDecodeError as error:
