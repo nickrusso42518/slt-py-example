@@ -1,5 +1,8 @@
 def get_last_char(word):
-  import pdb; pdb.set_trace()
-  return word[len(word) - 1]  # or simply -1
+    # Legacy technique, pre-Python 3.7
+    # import pdb; pdb.set_trace()
 
-print(get_last_char("nick"))
+    breakpoint() # Python 3.7+
+    return word[-1]
+
+print(get_last_char('program'))

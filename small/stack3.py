@@ -1,11 +1,11 @@
-def print_name():
-    print("nick russo"[99])
+import sys
+def get_endian():
+    return sys.byteorder[42518]
 
-def run_loop(repeat):
-    for i in range(repeat):
-        try:
-            print_name()
-        except IndexError:
-            print("oops!")
+def print_result():
+    try:
+        print (get_endian())
+    except IndexError as exc:
+        print(exc)
 
-run_loop(3)
+print_result()
