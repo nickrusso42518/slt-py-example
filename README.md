@@ -54,6 +54,14 @@ $ tree
 ```
 
 Ensure you have Python 3.6 or newer installed along with pip.
+Ideally, you should have 3.10 to be on par with the instructor.
+Note that some minor features require 3.7 or 3.8, but the main
+programs can run on 3.6 at a minimum.
+
+```
+$ python --version
+Python 3.10.5
+```
 
 > Visit https://www.python.org/downloads/ to download Python.
 
@@ -87,7 +95,7 @@ is interactive and asks the user whether the units are inches (in) or
 centimeters (cm).
 
 ```
-$ python3 fundamental.py
+$ python fundamental.py
 Choose unit of measure (cm or in): in
 radius 5 -> area 78.54 in sq
 radius 8 -> area 201.06 in sq
@@ -110,7 +118,7 @@ When one argument is supplied, the script is non-interactive, as `in` or `cm`
 has been specified.
 
 ```
-$ python3 fundamental.py cm
+$ python fundamental.py cm
 radius 5 -> area 78.54 cm sq
 radius 8 -> area 201.06 cm sq
 radius 11 -> area 380.13 cm sq
@@ -132,7 +140,7 @@ If the interactive or command line argument is bogus, the program keeps
 asking for the current input (case insensitive):
 
 ```
-$ python3 fundamental.py dog
+$ python fundamental.py dog
 Choose unit of measure (cm or in): cat
 Choose unit of measure (cm or in): monkey
 Choose unit of measure (cm or in): CM
@@ -162,7 +170,7 @@ programming, abstract classes, polymorphism, and YAML/JSON interaction
 for execution.
 
 ```
-$ python3 complete.py cm
+$ python complete.py cm
 Type:  Rectangle
  Area:  21 cm sq
  Perim: 20 cm
