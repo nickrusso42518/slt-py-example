@@ -1,0 +1,11 @@
+{
+  "name": "office",
+  "furniture": [
+    "bed",
+    "desk"
+  ],
+  "walls": {
+    "number": 4,
+    "color": "light_blue"
+  }
+}

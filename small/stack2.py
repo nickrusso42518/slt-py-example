@@ -1,8 +1,8 @@
-def print_name():
-    print("nick russo"[99])
+import sys
+def get_endian():
+    return sys.byteorder[42518]
 
-def run_loop(repeat):
-    for i in range(repeat):
-        print_name()
+def print_result():
+    print (get_endian())
 
-run_loop(3)
+print_result()

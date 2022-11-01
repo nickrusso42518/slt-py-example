@@ -28,7 +28,7 @@ class Circle(Shape):
         """
         Compute the area using the formula pi * radius^2
         """
-        return round(pi * (self.radius ** 2), self.decimal_places)
+        return round(pi * (self.radius**2), self.decimal_places)
 
     def perimeter(self):
         """

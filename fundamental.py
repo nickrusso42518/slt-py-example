@@ -23,7 +23,7 @@ def main(argv):
 
     # Iterate over each each radius and compute the circle's area.
     for radius in radius_list:
-        area = round(pi * (radius ** 2), 2)
+        area = round(pi * (radius**2), 2)
         print("radius {0} -> area {1} {2} sq".format(radius, area, units))
 
     # Iterate again, except use a dangerous and error-prone technique.

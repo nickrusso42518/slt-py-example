@@ -1,8 +1,0 @@
----
-name: nick  # YAML allows comments
-things:
-  - chair
-  - table
-  - sofa:
-      color: gray
-      age: 2
