@@ -1,8 +1,8 @@
 ---
 name: office  # YAML allows comments
-furniture:
+furniture:    # value is list of strings
   - bed
   - desk
-walls:
+walls:        # value is another dict (nested)
   number: 4
   color: light_blue
