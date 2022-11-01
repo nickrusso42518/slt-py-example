@@ -1,6 +1,6 @@
 [![Build Status](
-https://travis-ci.org/nickrusso42518/slt-py-example.svg?branch=master)](
-https://travis-ci.org/nickrusso42518/slt-py-example)
+https://travis-ci.com/nickrusso42518/slt-py-example.svg?branch=master)](
+https://travis-ci.com/nickrusso42518/slt-py-example)
 
 # Safari Live Training - Python By Example
 Source code for the training course. Please contact me with any questions.
