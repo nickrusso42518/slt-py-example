@@ -2,9 +2,9 @@ from abc import ABC, abstractmethod
 
 class Animal(ABC):
     @abstractmethod
-    def __init__(self, size):
-        self.size = size.upper()
+    def __init__(self, name):
+        self.name = name.strip().upper()
 
     @abstractmethod
-    def get_info(self):
+    def feed(self):
         pass

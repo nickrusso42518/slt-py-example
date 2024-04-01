@@ -1,7 +1,7 @@
 import dog, cat
-my_animals = [
-    dog.Dog("friendly", "big"),
-    cat.Cat("meow", "tiny")
+cartoons = [
+    cat.Cat(" ren  ", True),
+    dog.Dog("stimpy", 25)
 ]
-for my_animal in my_animals:
-    print(my_animal.get_info())
+for cartoon in cartoons:
+    print(cartoon.feed())
