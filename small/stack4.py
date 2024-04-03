@@ -1,6 +1,6 @@
 import sys
 def get_endian():
-    # return sys.byteorder[42518]
+    # return sys.byteorder[10]
     raise NotImplementedError("do not use!")
 
 def print_result():
